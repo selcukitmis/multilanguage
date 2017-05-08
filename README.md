@@ -50,9 +50,7 @@ Web.config dosyası içerisindeki System.Web böümünün içerisine `<globaliza
 Global.asax dosyasına
 
 `protected void Application_BeginRequest(object sender, EventArgs e)`
-
 methodunu ekleyin ve aşağıdaki kodları bu methodun içerisine yapıştırın 
-
 ```var lang = "tr-TR";
 
 var cookie = Request.Cookies["MultiLanguageExample"];
@@ -66,7 +64,6 @@ System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.Cu
 System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(lang);
 
 ```
-
 Web Sayfanız içerisinde hangi anahtarın görüntülenmesini istiyorsanız bunu belirtin.
 Örneğin; @Example.HelloWorld
 Farklı bir dil görüntülemek için /Home/ChangeLanguage actionresult bölümünü call edeceğiz. 
@@ -74,7 +71,6 @@ Farklı bir dil görüntülemek için /Home/ChangeLanguage actionresult bölüm�
 Parametre olarak görüntülemek istediğimiz dilin uzantısını göndermemiz gerekiyor.
 
 ChangeLanguage ActionResult bölümünün içerisindeki kodlar aşağıdaki gibi olmalıdır.
-
 ```HttpCookie cookie;
 
 cookie = new HttpCookie("MultiLanguageExample");
