@@ -37,13 +37,13 @@ Resource dosyalarının içine giriniz ve üst bölümde bulunan Access Modifier
 
 Her resource dosyalarının içinde sol üst bölümde bulunan Add Resource düğmesine tıklayarak yeni bir name-value oluşturunuz. .
 
-Example.resx dosyasında; Name: HelloWorld, Value: Merhaba Dünya
+* Example.resx dosyasında; Name: HelloWorld, Value: Merhaba Dünya
 
-Example.tr-TR.resx dosyasında; Name: HelloWorld, Value: Merhaba Dünya
+* Example.tr-TR.resx dosyasında; Name: HelloWorld, Value: Merhaba Dünya
 
-Example.en-US.resx dosyasında; Name: HelloWorld, Value: Hello World
+* Example.en-US.resx dosyasında; Name: HelloWorld, Value: Hello World
 
-Example.de-DE.resx dosyasında; Name: HelloWorld, Value: Hallo Welt
+* Example.de-DE.resx dosyasında; Name: HelloWorld, Value: Hallo Welt
 
 Web.config dosyası içerisindeki System.Web böümünün içerisine <globalization uiCulture='auto' culture='auto' /> etiketini ekleyin.
 
