@@ -7,7 +7,7 @@ Bu örnek çoklu dilli web siteleri geliştirmek amaçlı yapılmıştır.
 Çok dilli uygulamaları Resource dosyaları ile sağlanmaktadır ve sadece siteyi görüntüleyen kişinin bilgisayarında sağlanır. 
 Multi language için yapacağımız örnek sadece arayüzler için geçerli olacaktır. 
 
-Dolayısıyla hangi dilin görüntülenmesi gerektiği bilgisini cookie den okuyup System.Threading.Thread.CurrentThread.CurrentCulture bölümüne seçili dili set edeceğiz. 
+Dolayısıyla hangi dilin görüntülenmesi gerektiği bilgisini cookie den okuyup **System.Threading.Thread.CurrentThread.CurrentCulture** bölümüne seçili dili set edeceğiz. 
 
 Görüntülenen verilerin de farklı dillerde olmasını istiyorsanız veri tabanı yapınıza buna göre konfigüre etmeniz gerekmektedir. 
 Örneğimiz üç farklı dil (Türkçe, İngilizce, Almanca) destekleyecektir. 
