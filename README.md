@@ -53,17 +53,17 @@ Global.asax dosyasına
 
 methodunu ekleyin ve aşağıdaki kodları bu methodun içerisine yapıştırın 
 
-`var lang = "tr-TR"; // Default dil`
+```var lang = "tr-TR"; // Default dil
 
-`var cookie = Request.Cookies["MultiLanguageExample"];`
+var cookie = Request.Cookies["MultiLanguageExample"];
 
-`if (cookie != null && cookie.Value != null)`
+if (cookie != null && cookie.Value != null)
 
-`lang = cookie.Value;`
+lang = cookie.Value;
 
-`System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo(lang);`
+System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo(lang);
 
-`System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(lang);`
+System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(lang);```
 
 Web Sayfanız içerisinde hangi anahtarın görüntülenmesini istiyorsanız bunu belirtin.
 Örneğin; @Example.HelloWorld
