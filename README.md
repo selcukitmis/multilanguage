@@ -14,13 +14,13 @@ Görüntülenen verilerin de farklı dillerde olmasını istiyorsanız veri taba
 
 Üç farklı dilin çalışabilmesi için projemize 4 adet Resource dosyası ekleyeceğiz.
 
-Example.resx (Default Dil)
+* Example.resx (Default Dil)
 
-Example.tr-TR.resx (Türkçe)
+* Example.tr-TR.resx (Türkçe)
 
-Example.en-US.resx (İngilizce)
+* Example.en-US.resx (İngilizce)
 
-Example.de-DE.resx (Almanca)
+* Example.de-DE.resx (Almanca)
 
 Bunun sebebi; uygulamamız ilk çalıştığında, herhangi bir dil seçilmediğinde görüntülenecek olan "Default" dilin görüntülenmesi içindir.
 Resource dosyalarının çalışma prensibi Key - Value mantığındadır. 
