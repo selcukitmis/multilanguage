@@ -48,7 +48,7 @@ Her resource dosyalarının içinde sol üst bölümde bulunan Add Resource dü�
 Web.config dosyası içerisindeki System.Web böümünün içerisine <globalization uiCulture='auto' culture='auto' /> etiketini ekleyin.
 
 Global.asax dosyasına
-protected void Application_BeginRequest(object sender, EventArgs e)
+`protected void Application_BeginRequest(object sender, EventArgs e)`
 
 methodunu ekleyin ve aşağıdaki kodları bu methodun içerisine yapıştırın 
 var lang = "tr-TR"; // Default dil
