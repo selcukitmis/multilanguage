@@ -53,7 +53,7 @@ Global.asax dosyasına
 
 methodunu ekleyin ve aşağıdaki kodları bu methodun içerisine yapıştırın 
 
-```var lang = "tr-TR"; // Default dil
+```var lang = "tr-TR";
 
 var cookie = Request.Cookies["MultiLanguageExample"];
 
@@ -63,7 +63,9 @@ lang = cookie.Value;
 
 System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo(lang);
 
-System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(lang);```
+System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(lang);
+
+```
 
 Web Sayfanız içerisinde hangi anahtarın görüntülenmesini istiyorsanız bunu belirtin.
 Örneğin; @Example.HelloWorld
@@ -73,16 +75,17 @@ Parametre olarak görüntülemek istediğimiz dilin uzantısını göndermemiz g
 
 ChangeLanguage ActionResult bölümünün içerisindeki kodlar aşağıdaki gibi olmalıdır.
 
-`HttpCookie cookie;`
+```HttpCookie cookie;
 
-`cookie = new HttpCookie("MultiLanguageExample");`
+cookie = new HttpCookie("MultiLanguageExample");
 
-`Thread.CurrentThread.CurrentCulture =new CultureInfo(language);`
+Thread.CurrentThread.CurrentCulture =new CultureInfo(language);
 
-`cookie.Value = language;`
+cookie.Value = language;
 
-`Response.SetCookie(cookie);`
+Response.SetCookie(cookie);
 
-`if (Request.UrlReferrer != null) return Redirect(Request.UrlReferrer.LocalPath);`
+if (Request.UrlReferrer != null) return Redirect(Request.UrlReferrer.LocalPath);
 
-`return Redirect("/Home/Index");`
+return Redirect("/Home/Index");
+```
