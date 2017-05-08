@@ -45,23 +45,25 @@ Her resource dosyalarının içinde sol üst bölümde bulunan Add Resource dü�
 
 * Example.de-DE.resx dosyasında; Name: HelloWorld, Value: Hallo Welt
 
-Web.config dosyası içerisindeki System.Web böümünün içerisine <globalization uiCulture='auto' culture='auto' /> etiketini ekleyin.
+Web.config dosyası içerisindeki System.Web böümünün içerisine `<globalization uiCulture='auto' culture='auto' />` etiketini ekleyin.
 
 Global.asax dosyasına
-```protected void Application_BeginRequest(object sender, EventArgs e)```
+
+`protected void Application_BeginRequest(object sender, EventArgs e)`
 
 methodunu ekleyin ve aşağıdaki kodları bu methodun içerisine yapıştırın 
-var lang = "tr-TR"; // Default dil
 
-var cookie = Request.Cookies["MultiLanguageExample"];
+`var lang = "tr-TR"; // Default dil`
 
-if (cookie != null && cookie.Value != null)
+`var cookie = Request.Cookies["MultiLanguageExample"];`
 
-lang = cookie.Value;
+`if (cookie != null && cookie.Value != null)`
 
-System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo(lang);
+`lang = cookie.Value;`
 
-System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(lang);
+`System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo(lang);`
+
+`System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(lang);`
 
 Web Sayfanız içerisinde hangi anahtarın görüntülenmesini istiyorsanız bunu belirtin.
 Örneğin; @Example.HelloWorld
@@ -71,16 +73,16 @@ Parametre olarak görüntülemek istediğimiz dilin uzantısını göndermemiz g
 
 ChangeLanguage ActionResult bölümünün içerisindeki kodlar aşağıdaki gibi olmalıdır.
 
-HttpCookie cookie;
+`HttpCookie cookie;`
 
-cookie = new HttpCookie("MultiLanguageExample");
+`cookie = new HttpCookie("MultiLanguageExample");`
 
-Thread.CurrentThread.CurrentCulture =new CultureInfo(language);
+`Thread.CurrentThread.CurrentCulture =new CultureInfo(language);`
 
-cookie.Value = language;
+`cookie.Value = language;`
 
-Response.SetCookie(cookie);
+`Response.SetCookie(cookie);`
 
-if (Request.UrlReferrer != null) return Redirect(Request.UrlReferrer.LocalPath);
+`if (Request.UrlReferrer != null) return Redirect(Request.UrlReferrer.LocalPath);`
 
-return Redirect("/Home/Index");
+`return Redirect("/Home/Index");`
